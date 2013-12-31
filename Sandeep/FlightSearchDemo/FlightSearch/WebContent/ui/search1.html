@@ -5,16 +5,10 @@
 <title>Insert title here</title>
 <link href="../resources/styles/final.css" rel="stylesheet"
 	type="text/css" media="screen">
-<link href="../resources/styles/jquery-ui.css" rel="stylesheet"
-	type="text/css" media="screen">
 <script src="../resources/scripts/jquery.js"></script>
-<script src="../resources/scripts/jquery-ui.js"></script>
 <script src="../resources/scripts/organictabs.jquery.js"></script>
-<script type="text/javascript">
-$(function() {
-	$("#tab-container").organicTabs();
-});
-</script>
+<script src="../resources/scripts/datepicker.js"></script>
+<script src="../resources/scripts/search.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -27,12 +21,84 @@ $(function() {
 				</ul>
 				<div class="list-wrap">
 					<ul id="oneway">
-						<li>One way Stuff in here!<br/><br/><br/><br/><br/><br/></li>
+						<li>
+							<form id="onewayform">
+								<table class="formTable" cellspacing="5">
+								<tr>
+									<td><label for="source">Origin</label></td>
+									<td><input id="source" name="source" placeholder="Enter Origin City" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="destination">Destination</label></td>
+									<td><input id="destination" name="destination" placeholder="Enter Destination City" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="depDate">Departure Date</label></td>
+									<td><input id="depDate" name="depDate" placeholder="Departure Date" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="noOfPass">Passengers</label></td>
+									<td><select id="noOfPass">
+										<option value="1" selected="selected">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><button type="button">Submit</button></td>
+								</tr>
+								</table>
+							</form>
+						</li>
 					</ul>
 					<ul id="return" class="hide">
-						<li>Return Stuff in here!<br/><br/><br/><br/><br/><br/></li>
+						<li>
+							<form id="returnForm">
+								<table class="formTable" cellspacing="5">
+								<tr>
+									<td><label for="source">Origin</label></td>
+									<td><input id="source" name="source" placeholder="Enter Origin City" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="destination">Destination</label></td>
+									<td><input id="destination" name="destination" placeholder="Enter Destination City" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="depDateR">Departure Date</label></td>
+									<td><input id="depDateR" name="depDateR" placeholder="Departure Date" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="retDate">Return Date</label></td>
+									<td><input id="retDate" name="retDate" placeholder="Return Date" type="text"></td>
+								</tr>
+								<tr>
+									<td><label for="noOfPass">Passengers</label></td>
+									<td><select id="noOfPass">
+										<option value="1" selected="selected">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><button type="button">Submit</button></td>
+								</tr>
+								</table>
+							</form>
+						</li>
 					</ul>
 				</div>
+			</div>
+			<div id="filterContainer">
+			<br/>
+			Refine Fight Search<br/><br/>gshdajdGSJH
 			</div>
 		</div>
 		<div class="resultContainer">

@@ -17,13 +17,231 @@ body {
 	left: 0;
 	font-family: Georgia, Arial, Helvetica, Verdana;
 	font-size: 14px;
-	font-weight: 500; overflow-x : hidden;
+	font-weight: 500;
+	overflow-x: hidden;
 	background-color: #FAFAFA;
 	position: fixed;
 	overflow-x: hidden;
 }
 
-/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+/*
+    Zebra_DatePicker: a lightweight jQuery date picker plugin
+    Default theme
+*/
+.Zebra_DatePicker *,.Zebra_DatePicker *:after,.Zebra_DatePicker *:before
+	{
+	-moz-box-sizing: content-box !important;
+	-webkit-box-sizing: content-box !important;
+	box-sizing: content-box !important;
+}
+
+.Zebra_DatePicker {
+	position: absolute;
+	background: #488DFC;
+	border: 3px solid #488DFC;
+	display: none;
+	z-index: 100;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+.Zebra_DatePicker * {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background: transparent;
+	border: none;
+}
+
+/* = GLOBALS
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.Zebra_DatePicker td,.Zebra_DatePicker th {
+	text-align: center;
+	padding: 5px 0;
+}
+
+.Zebra_DatePicker td {
+	cursor: pointer;
+}
+
+.Zebra_DatePicker .dp_daypicker,.Zebra_DatePicker .dp_monthpicker,.Zebra_DatePicker .dp_yearpicker
+	{
+	margin-top: 3px;
+}
+
+.Zebra_DatePicker .dp_daypicker td,.Zebra_DatePicker .dp_daypicker th,.Zebra_DatePicker .dp_monthpicker td,.Zebra_DatePicker .dp_yearpicker td
+	{
+	background: #fff;
+	width: 30px;
+	border: 1px solid #7BACD2;
+}
+
+.Zebra_DatePicker,.Zebra_DatePicker .dp_header .dp_hover,.Zebra_DatePicker .dp_footer .dp_hover
+	{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* = HEADER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_header td {
+	color: #FFF;
+}
+
+.Zebra_DatePicker .dp_header .dp_previous,.Zebra_DatePicker .dp_header .dp_next
+	{
+	width: 30px;
+}
+
+.Zebra_DatePicker .dp_header .dp_caption {
+	font-weight: bold;
+}
+
+.Zebra_DatePicker .dp_header .dp_hover {
+	background: #2061C9;
+	color: #FFF;
+}
+
+.Zebra_DatePicker .dp_header .dp_blocked {
+	color: #888;
+	cursor: default;
+}
+
+/* = DATEPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_daypicker th {
+	background: #A4D5FF;
+}
+
+.Zebra_DatePicker td.dp_not_in_month {
+	background: #F3F3F3;
+	color: #CDCDCD;
+	cursor: default;
+}
+
+.Zebra_DatePicker td.dp_not_in_month_selectable {
+	background: #F3F3F3;
+	color: #CDCDCD;
+	cursor: pointer;
+}
+
+.Zebra_DatePicker td.dp_weekend {
+	background: #D8D8D8;
+}
+
+.Zebra_DatePicker td.dp_weekend_disabled {
+	color: #CCC;
+	cursor: default;
+}
+
+.Zebra_DatePicker td.dp_selected {
+	background: #9AC1FF;
+	color: #FFF !important;
+}
+
+.Zebra_DatePicker td.dp_week_number {
+	background: #9AC1FF;
+	color: #555;
+	cursor: text;
+	font-style: italic;
+}
+
+/* = MONTHPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_monthpicker td {
+	width: 33%;
+}
+
+/* = YEARPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_yearpicker td {
+	width: 33%;
+}
+
+/* = FOOTER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_footer {
+	margin-top: 3px;
+}
+
+.Zebra_DatePicker .dp_footer .dp_hover {
+	background: #2061C9;
+	color: #FFF;
+}
+
+/* = SELECT CURRENT DAY
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_today {
+	color: #FFF;
+	padding: 3px;
+}
+
+/* = CLEAR DATE
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_clear {
+	color: #FFF;
+	padding: 3px;
+}
+
+/* = SOME MORE GLOBALS (MUST BE LAST IN ORDER TO OVERWRITE PREVIOUS PROPERTIES)
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker td.dp_current {
+	color: #C40000;
+}
+
+.Zebra_DatePicker td.dp_disabled_current {
+	color: #E38585;
+}
+
+.Zebra_DatePicker td.dp_disabled {
+	background: #F3F3F3;
+	color: #CDCDCD;
+	cursor: default;
+}
+
+.Zebra_DatePicker td.dp_hover {
+	background: #FFA544;
+	color: #000;
+}
+
+/* = ICON
+----------------------------------------------------------------------------------------------------------------------*/
+button.Zebra_DatePicker_Icon {
+	display: block;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url(../images/calendar.png) no-repeat left top;
+	text-indent: -9000px;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	line-height: 0;
+	vertical-align: top;
+}
+
+button.Zebra_DatePicker_Icon_Disabled {
+	background-image: url(../images/calendar-disabled.png);
+}
+
+/* don't set vertical margins! */
+button.Zebra_DatePicker_Icon {
+	margin: 0 0 0 3px;
+}
+
+button.Zebra_DatePicker_Icon_Inside {
+	margin: 0 3px 0 0;
+}
+
+/*End of date picker style ---------------------------------------------------------------------------------------------*/
+
+/*Screen Resolution wise stylesheet*/
 @media only screen and (min-width: 1200px) {
 	::-webkit-scrollbar {
 		width: 10px;
@@ -46,7 +264,6 @@ body {
 		width: 90%;
 		height: 100%;
 		position: absolute;
-		border: solid 1px #000;
 	}
 	.header {
 		width: 100%;
@@ -57,20 +274,68 @@ body {
 		text-align: center;
 		color: #488DFC;
 	}
-	
 	.footer {
 		width: 100%;
 		height: 3%;
-		left:0;
-		bottom:0;
+		left: 0;
+		bottom: 0;
 		position: fixed;
 		background-color: #E7E7E7;
 		text-align: center;
 	}
 
+	/* Select Menu Styles */
+	select {
+		padding: 3px;
+		background-color: #fff;
+		margin: 0;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		color: #000;
+		border: none;
+		outline: none;
+		display: inline-block;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		cursor: pointer;
+		min-width: 50px;
+		background-image: url(../images/arrowb.png);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+
+	/* Button Styles */
+	button {
+		font-size: 14px;
+		color: #fff;
+		padding: 5px 10px;
+		background: -moz-linear-gradient(top, #488DFC 0%, #488DFC);
+		background: -webkit-gradient(linear, left top, left bottom, from(#488DFC),
+			to(#488DFC));
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		border-radius: 6px;
+		border: 1px solid #488DFC;
+		-moz-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 0px
+			rgba(255, 255, 255, 0.7);
+		-webkit-box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px
+			0px rgba(255, 255, 255, 0.7);
+		box-shadow: 0px 1px 3px rgba(000, 000, 000, 0.5), inset 0px 0px 0px
+			rgba(255, 255, 255, 0.7);
+		color: white;
+		text-shadow: 0px -1px 1px rgba(000, 000, 000, 0.2), 0px 1px 0px
+			rgba(255, 255, 255, 0.3);
+		cursor: pointer;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#488DFC',
+			endColorstr='#488DFC', GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	}
+
 	/* Input field styles */
 	input[type=text] {
-		background-color: #A9D2DF;
+		background-color: #fff;
 		border-radius: 3px;
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0
 			rgba(0, 0, 0, 0.05) inset;
@@ -99,39 +364,111 @@ body {
 	}
 }
 
-.searchTabContainer{
+.searchTabContainer {
 	width: 25%;
 	height: 50%;
 	position: relative;
 }
 
+table.formTable {
+	width: 100%;
+}
+
+table.formTable tr {
+	border-collapse: collapse;
+	margin-bottom: 10px;
+}
 /* Styles for Oneway and return tabs*/
+#tab-container .list-wrap {
+	background: #B5D3FF;
+	padding: 10px;
+	margin: 0 0 15px 0;
+	color: #000;
+	border-radius: 0px 3px 3px 3px;
+}
 
-#tab-container .list-wrap { background: #488DFC; padding: 10px; margin: 0 0 15px 0; color: #fff; border-radius: 0px 3px 3px 3px;}
+#tab-container ul {
+	list-style: none;
+}
 
-#tab-container ul { list-style: none;}
-#tab-container ul li { list-style: none; border-radius: 0px 3px 3px 3px;}
-#tab-container ul li a { display: block; border-bottom: 1px solid #666; padding: 4px; color: #666; }
-#tab-container ul li a:hover { background: #333; color: white; }
-#tab-container ul li:last-child a { border: none; }
+#tab-container ul li {
+	list-style: none;
+	border-radius: 0px 3px 3px 3px;
+}
 
-#tab-container .nav { overflow: hidden; }
-#tab-container .nav li { width: 97px; float: left; margin: 0 5px 0 0;border-radius: 3px 3px 0px 0px;}
-#tab-container .nav li.last { margin-right: 0; }
-#tab-container .nav li a { display: block; padding: 5px; background: #90BBFF; color: #000; font-size: 14px; text-align: center;
-border: 0; text-decoration: none; border-radius: 3px 3px 0px 0px; font-weight: bold;}
+#tab-container ul li a {
+	display: block;
+	border-bottom: 1px solid #666;
+	padding: 4px;
+	color: #666;
+}
 
-#tab-container li a.current,#example-two li a.current:hover { background-color: #488DFC !important; color: #fff; }
-#tab-container .nav li a:hover, #example-two .nav li a:focus { background: #7FB0FF;}
-.hide { position: absolute; top: -9999px; left: -9999px; }
+#tab-container ul li a:hover {
+	background: #488DFC;
+	color: #white;
+}
 
-.resultContainer{
+#tab-container ul li:last-child a {
+	border: none;
+}
+
+#tab-container .nav {
+	overflow: hidden;
+}
+
+#tab-container .nav li {
+	width: 97px;
+	float: left;
+	margin: 0 5px 0 0;
+	border-radius: 3px 3px 0px 0px;
+}
+
+#tab-container .nav li.last {
+	margin-right: 0;
+}
+
+#tab-container .nav li a {
+	display: block;
+	padding: 5px;
+	background: #488DFC;
+	color: #000;
+	font-size: 14px;
+	text-align: center;
+	border: 0;
+	text-decoration: none;
+	border-radius: 3px 3px 0px 0px;
+	font-weight: bold;
+}
+
+#tab-container li a.current,#tab-container li a.current:hover {
+	background-color: #B5D3FF !important;
+	color: #000 !important;
+}
+
+#tab-container .nav li a:hover,#tab-container .nav li a:focus {
+	color:#fff;
+}
+
+.hide {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+#filterContainer{
+	background-color: #B5D3FF;
+	width: 100%;
+	height: 80px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.resultContainer {
 	width: 72%;
 	height: 85%;
-	top:10%;
-	margin-left:27%;
+	top: 10%;
+	margin-left: 27%;
 	position: absolute;
 	border: solid 1px cyan;
 }
-
 }
