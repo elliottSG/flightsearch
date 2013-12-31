@@ -1,0 +1,137 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	font-family: Georgia, Arial, Helvetica, Verdana;
+	font-size: 14px;
+	font-weight: 500; overflow-x : hidden;
+	background-color: #FAFAFA;
+	position: fixed;
+	overflow-x: hidden;
+}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (min-width: 1200px) {
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: #EFEFEF;
+		border-left: 1px solid #ccc;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #069;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #4E72CF;
+		cursor: pointer;
+	}
+	.wrapper {
+		left: 5%;
+		padding: 0;
+		width: 90%;
+		height: 100%;
+		position: absolute;
+		border: solid 1px #000;
+	}
+	.header {
+		width: 100%;
+		height: 10%;
+		position: relative;
+		/* border: solid 1px blue; */
+		font-size: 50px;
+		text-align: center;
+		color: #488DFC;
+	}
+	
+	.footer {
+		width: 100%;
+		height: 3%;
+		left:0;
+		bottom:0;
+		position: fixed;
+		background-color: #E7E7E7;
+		text-align: center;
+	}
+
+	/* Input field styles */
+	input[type=text] {
+		background-color: #A9D2DF;
+		border-radius: 3px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0
+			rgba(0, 0, 0, 0.05) inset;
+		transition: all 0.2s linear;
+		font-size: 12px;
+		color: #222222;
+		height: 25px;
+		width: 180px;
+		&::
+		-webkit-input-placeholder
+		{
+		color
+		:
+		#787878;
+	}
+	&
+	:-moz-placeholder {
+		color: #787878;
+	}
+	&
+	:focus {
+		box-shadow: 0 1px 0 #2392F3 inset, 0 -1px 0 #2392F3 inset, 1px 0 0
+			#2392F3 inset, -1px 0 0 #2392F3 inset, 0 0 4px
+			rgba(35, 146, 243, 0.5);
+		outline: none;
+	}
+}
+
+.searchTabContainer{
+	width: 25%;
+	height: 50%;
+	position: relative;
+}
+
+/* Styles for Oneway and return tabs*/
+
+#tab-container .list-wrap { background: #488DFC; padding: 10px; margin: 0 0 15px 0; color: #fff; border-radius: 0px 3px 3px 3px;}
+
+#tab-container ul { list-style: none;}
+#tab-container ul li { list-style: none; border-radius: 0px 3px 3px 3px;}
+#tab-container ul li a { display: block; border-bottom: 1px solid #666; padding: 4px; color: #666; }
+#tab-container ul li a:hover { background: #333; color: white; }
+#tab-container ul li:last-child a { border: none; }
+
+#tab-container .nav { overflow: hidden; }
+#tab-container .nav li { width: 97px; float: left; margin: 0 5px 0 0;border-radius: 3px 3px 0px 0px;}
+#tab-container .nav li.last { margin-right: 0; }
+#tab-container .nav li a { display: block; padding: 5px; background: #90BBFF; color: #000; font-size: 14px; text-align: center;
+border: 0; text-decoration: none; border-radius: 3px 3px 0px 0px; font-weight: bold;}
+
+#tab-container li a.current,#example-two li a.current:hover { background-color: #488DFC !important; color: #fff; }
+#tab-container .nav li a:hover, #example-two .nav li a:focus { background: #7FB0FF;}
+.hide { position: absolute; top: -9999px; left: -9999px; }
+
+.resultContainer{
+	width: 72%;
+	height: 85%;
+	top:10%;
+	margin-left:27%;
+	position: absolute;
+	border: solid 1px cyan;
+}
+
+}

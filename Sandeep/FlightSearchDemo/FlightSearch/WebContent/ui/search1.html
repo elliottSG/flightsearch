@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link href="../resources/styles/final.css" rel="stylesheet"
+	type="text/css" media="screen">
+<link href="../resources/styles/jquery-ui.css" rel="stylesheet"
+	type="text/css" media="screen">
+<script src="../resources/scripts/jquery.js"></script>
+<script src="../resources/scripts/jquery-ui.js"></script>
+<script src="../resources/scripts/organictabs.jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#tab-container").organicTabs();
+});
+</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">Flight Search Engine</div>
+		<div class="searchTabContainer">
+			<div id="tab-container">
+				<ul class='nav'>
+					<li class="nav-one"><a href="#oneway" class="current">One Way</a></li>
+					<li class="nav-two last"><a href="#return">Return</a></li>
+				</ul>
+				<div class="list-wrap">
+					<ul id="oneway">
+						<li>One way Stuff in here!<br/><br/><br/><br/><br/><br/></li>
+					</ul>
+					<ul id="return" class="hide">
+						<li>Return Stuff in here!<br/><br/><br/><br/><br/><br/></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="resultContainer">
+		
+		</div>
+		<div class="footer">&copy; Sandeep. Test Development</div>
+	</div>
+</body>
+</html>
