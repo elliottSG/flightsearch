@@ -1,6 +1,6 @@
 function flightData() {
 }
-flightData.json = [ {
+flightData.jsononeway = [ {
 	"flightId" : "G8-115",
 	"airline" : "Go Air",
 	"source" : "New Delhi",
@@ -9,7 +9,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "9:40",
 	"arrTime" : "12:10",
-	"cost" : "4085"
+	"cost" : 4085,
+	"seatsAvail" : 20
 }, {
 	"flightId" : "G8-117",
 	"airline" : "Go Air",
@@ -19,7 +20,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "17:30",
 	"arrTime" : "20:10",
-	"cost" : "4696"
+	"cost" : 4696,
+	"seatsAvail" : 31
 }, {
 	"flightId" : "SG-501",
 	"airline" : "Spicejet",
@@ -29,9 +31,10 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "6:05",
 	"arrTime" : "8:55",
-	"cost" : "5664"
+	"cost" : 5664,
+	"seatsAvail" : 45
 }, {
-	"flightId" : "6E-115",
+	"flightId" : "6.00E-115",
 	"airline" : "Indigo",
 	"source" : "New Delhi",
 	"sourceCode" : "DEL",
@@ -39,7 +42,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "8:05",
 	"arrTime" : "10:45",
-	"cost" : "5697"
+	"cost" : 5697,
+	"seatsAvail" : 21
 }, {
 	"flightId" : "9W-7125",
 	"airline" : "Jet Airways",
@@ -49,7 +53,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "9:35",
 	"arrTime" : "12:20",
-	"cost" : "7561"
+	"cost" : 7561,
+	"seatsAvail" : 34
 }, {
 	"flightId" : "AI-506",
 	"airline" : "Air India",
@@ -59,7 +64,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "9:45",
 	"arrTime" : "12:30",
-	"cost" : "10064"
+	"cost" : 10064,
+	"seatsAvail" : 45
 }, {
 	"flightId" : "AI-403",
 	"airline" : "Air India",
@@ -69,7 +75,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "16:05",
 	"arrTime" : "19:25",
-	"cost" : "5615"
+	"cost" : 5615,
+	"seatsAvail" : 12
 }, {
 	"flightId" : "S2-4235",
 	"airline" : "Jet Konnect",
@@ -79,7 +86,8 @@ flightData.json = [ {
 	"destCode" : "BLR",
 	"depTime" : "19:15",
 	"arrTime" : "21:55",
-	"cost" : "4565"
+	"cost" : 4565,
+	"seatsAvail" : 54
 }, {
 	"flightId" : "SG-502",
 	"airline" : "Spicejet",
@@ -89,7 +97,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "6:35",
 	"arrTime" : "9:25",
-	"cost" : "5665"
+	"cost" : 5665,
+	"seatsAvail" : 56
 }, {
 	"flightId" : "G8-116",
 	"airline" : "Go Air",
@@ -99,7 +108,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "8:20",
 	"arrTime" : "10:55",
-	"cost" : "5416"
+	"cost" : 5416,
+	"seatsAvail" : 1
 }, {
 	"flightId" : "SG-224",
 	"airline" : "Spicejet",
@@ -109,9 +119,10 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "8:50",
 	"arrTime" : "11:30",
-	"cost" : "6646"
+	"cost" : 6646,
+	"seatsAvail" : 34
 }, {
-	"flightId" : "6E-122",
+	"flightId" : "6.00E-122",
 	"airline" : "Indigo",
 	"source" : "Bangalore",
 	"sourceCode" : "BLR",
@@ -119,7 +130,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "15:00",
 	"arrTime" : "17:40",
-	"cost" : "10356 "
+	"cost" : 10356,
+	"seatsAvail" : 53
 }, {
 	"flightId" : "G8-118",
 	"airline" : "Go Air",
@@ -129,7 +141,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "20:15",
 	"arrTime" : "22:50",
-	"cost" : "5663"
+	"cost" : 5663,
+	"seatsAvail" : 13
 }, {
 	"flightId" : "SG-216",
 	"airline" : "Spicejet",
@@ -139,7 +152,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "21:05",
 	"arrTime" : "23:50",
-	"cost" : "4663"
+	"cost" : 4663,
+	"seatsAvail" : 45
 }, {
 	"flightId" : "9W-7120",
 	"airline" : "Jet Airways",
@@ -149,7 +163,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "17:35",
 	"arrTime" : "20:04",
-	"cost" : "7986"
+	"cost" : 7986,
+	"seatsAvail" : 63
 }, {
 	"flightId" : "AI-505",
 	"airline" : "Air India",
@@ -159,7 +174,8 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "10:30",
 	"arrTime" : "12:55",
-	"cost" : "8533"
+	"cost" : 8533,
+	"seatsAvail" : 3
 }, {
 	"flightId" : "AI-503",
 	"airline" : "Air India",
@@ -169,5 +185,314 @@ flightData.json = [ {
 	"destCode" : "DEL",
 	"depTime" : "16:30",
 	"arrTime" : "19:25",
-	"cost" : "6786"
+	"cost" : 6786,
+	"seatsAvail" : 4
+} ];
+
+flightData.jsonreturn = [ {
+	"onFlightId" : "G8-115",
+	"onAirline" : "Go Air",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "9:40",
+	"arrTime" : "12:10",
+	"onSeats" : 12,
+	"retFlightId" : "SG-502",
+	"retAirline" : "Spicejet",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "6:35",
+	"retArr" : "9:25",
+	"cost" : 9050,
+	"retSeats" : 20
+}, {
+	"onFlightId" : "G8-117",
+	"onAirline" : "Go Air",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "17:30",
+	"arrTime" : "20:10",
+	"onSeats" : 25,
+	"retFlightId" : "G8-116",
+	"retAirline" : "Go Air",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "8:20",
+	"retArr" : "10:55",
+	"cost" : 12115,
+	"retSeats" : 31
+}, {
+	"onFlightId" : "SG-501",
+	"onAirline" : "Spicejet",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "6:05",
+	"arrTime" : "8:55",
+	"onSeats" : 31,
+	"retFlightId" : "SG-224",
+	"retAirline" : "Spicejet",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "8:50",
+	"retArr" : "11:30",
+	"cost" : 12354,
+	"retSeats" : 12
+}, {
+	"onFlightId" : "6E-115",
+	"onAirline" : "Indigo",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "8:05",
+	"arrTime" : "10:45",
+	"onSeats" : 5,
+	"retFlightId" : "6E-122",
+	"retAirline" : "Indigo",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "15:00",
+	"retArr" : "17:40",
+	"cost" : 10500,
+	"retSeats" : 46
+}, {
+	"onFlightId" : "9W-7125",
+	"onAirline" : "Jet Airways",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "9:35",
+	"arrTime" : "12:20",
+	"onSeats" : 8,
+	"retFlightId" : "G8-118",
+	"retAirline" : "Go Air",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "20:15",
+	"retArr" : "22:50",
+	"cost" : 9560,
+	"retSeats" : 61
+}, {
+	"onFlightId" : "AI-506",
+	"onAirline" : "Air India",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "9:45",
+	"arrTime" : "12:30",
+	"onSeats" : 10,
+	"retFlightId" : "SG-216",
+	"retAirline" : "Spicejet",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "21:05",
+	"retArr" : "23:50",
+	"cost" : 8400,
+	"retSeats" : 11
+}, {
+	"onFlightId" : "AI-403",
+	"onAirline" : "Air India",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "16:05",
+	"arrTime" : "19:25",
+	"onSeats" : 19,
+	"retFlightId" : "9W-7120",
+	"retAirline" : "Jet Airways",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "17:35",
+	"retArr" : "20:04",
+	"cost" : 7900,
+	"retSeats" : 17
+}, {
+	"onFlightId" : "S2-4235",
+	"onAirline" : "Jet Konnect",
+	"onward" : "New Delhi",
+	"onwardCode" : "DEL",
+	"destination" : "Bangalore",
+	"destCode" : "BLR",
+	"depTime" : "19:15",
+	"arrTime" : "21:55",
+	"onSeats" : 7,
+	"retFlightId" : "AI-505",
+	"retAirline" : "Air India",
+	"return" : "New Delhi",
+	"returnCode" : "DEL",
+	"retDep" : "10:30",
+	"retArr" : "12:55",
+	"cost" : 10900,
+	"retSeats" : 2
+}, {
+	"onFlightId" : "SG-502",
+	"onAirline" : "Spicejet",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "6:35",
+	"arrTime" : "9:25",
+	"onSeats" : 3,
+	"retFlightId" : "G8-115",
+	"retAirline" : "Go Air",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "9:40",
+	"retArr" : "12:10",
+	"cost" : 11560,
+	"retSeats" : 6
+}, {
+	"onFlightId" : "G8-116",
+	"onAirline" : "Go Air",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "8:20",
+	"arrTime" : "10:55",
+	"onSeats" : 40,
+	"retFlightId" : "G8-117",
+	"retAirline" : "Go Air",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "17:30",
+	"retArr" : "20:10",
+	"cost" : 12359,
+	"retSeats" : 22
+}, {
+	"onFlightId" : "SG-224",
+	"onAirline" : "Spicejet",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "8:50",
+	"arrTime" : "11:30",
+	"onSeats" : 11,
+	"retFlightId" : "SG-501",
+	"retAirline" : "Spicejet",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "6:05",
+	"retArr" : "8:55",
+	"cost" : 11568,
+	"retSeats" : 16
+}, {
+	"onFlightId" : "6E-122",
+	"onAirline" : "Indigo",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "15:00",
+	"arrTime" : "17:40",
+	"onSeats" : 9,
+	"retFlightId" : "6E-115",
+	"retAirline" : "Indigo",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "8:05",
+	"retArr" : "10:45",
+	"cost" : 10579,
+	"retSeats" : 6
+}, {
+	"onFlightId" : "G8-118",
+	"onAirline" : "Go Air",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "20:15",
+	"arrTime" : "22:50",
+	"onSeats" : 1,
+	"retFlightId" : "9W-7125",
+	"retAirline" : "Jet Airways",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "9:35",
+	"retArr" : "12:20",
+	"cost" : 9956,
+	"retSeats" : 9
+}, {
+	"onFlightId" : "SG-216",
+	"onAirline" : "Spicejet",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "21:05",
+	"arrTime" : "23:50",
+	"onSeats" : 2,
+	"retFlightId" : "AI-506",
+	"retAirline" : "Air India",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "9:45",
+	"retArr" : "12:30",
+	"cost" : 8820,
+	"retSeats" : 28
+}, {
+	"onFlightId" : "9W-7120",
+	"onAirline" : "Jet Airways",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "17:35",
+	"arrTime" : "20:04",
+	"onSeats" : 11,
+	"retFlightId" : "AI-403",
+	"retAirline" : "Air India",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "16:05",
+	"retArr" : "19:25",
+	"cost" : 7986,
+	"retSeats" : 33
+}, {
+	"onFlightId" : "AI-505",
+	"onAirline" : "Air India",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "10:30",
+	"arrTime" : "12:55",
+	"onSeats" : 3,
+	"retFlightId" : "S2-4235",
+	"retAirline" : "Jet Konnect",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "19:15",
+	"retArr" : "21:55",
+	"cost" : 8533,
+	"retSeats" : 12
+}, {
+	"onFlightId" : "AI-503",
+	"onAirline" : "Air India",
+	"onward" : "Bangalore",
+	"onwardCode" : "BLR",
+	"destination" : "New Delhi",
+	"destCode" : "DEL",
+	"depTime" : "16:30",
+	"arrTime" : "19:25",
+	"onSeats" : 4,
+	"retFlightId" : "S2-4236",
+	"retAirline" : "Jet Konnect",
+	"return" : "Bangalore",
+	"returnCode" : "BLR",
+	"retDep" : "20:15",
+	"retArr" : "22:55",
+	"cost" : 9956,
+	"retSeats" : 4
 } ];
