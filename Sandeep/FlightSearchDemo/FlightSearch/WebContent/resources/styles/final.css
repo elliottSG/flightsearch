@@ -1,3 +1,8 @@
+/**
+*  Author : SandeepK01
+*  Description: Master style sheet for 1024px and 1280px screen width in landscape mode
+*/
+
 @CHARSET "ISO-8859-1";
 
 html {
@@ -41,7 +46,7 @@ body {
 /*Screen Resolution wise stylesheet*/
 
 /* Resolution for iPad mini and old laptop/desktop compatible for screen with 1024x768 resolution*/
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px){
 	::-webkit-scrollbar {
 		width: 5px;
 	}
@@ -276,13 +281,6 @@ table.formTable {
 	top: 10%;
 	margin-left: 27%;
 	position: absolute;
-}
-
-.messageDiv {
-	width: 100%;
-	height: 25px;
-	position: relative;
-	text-align: justify;
 }
 
 .ui-datepicker {
@@ -651,13 +649,6 @@ table.formTable {
 	position: absolute;
 }
 
-.messageDiv {
-	width: 100%;
-	height: 25px;
-	position: relative;
-	text-align: justify;
-}
-
 .ui-datepicker {
 	width: 180px !important;
 }
@@ -786,3 +777,5 @@ span.arrive{
 	margin: 5px;
 }
 }
+
+/*-- End of 1280 screen width ===========================================================================================*/

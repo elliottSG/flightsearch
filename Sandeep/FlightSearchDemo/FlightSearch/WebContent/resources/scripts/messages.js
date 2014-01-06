@@ -1,5 +1,6 @@
 /**
- * This is JS Object class for displaying validation and server side messages
+ * Author : SandeepK01
+ * Description : This is JS Object class for displaying validation messages
  * on the page.
  * */
 
@@ -8,22 +9,15 @@ function Message() { }
 function setMessage(type,message) 
 {
 	if(type=="success"){
-		$('#msgWid').hide();
+		$().toastmessage('showSuccessToast', message);
 	}else if(type=="error"){
-		$('#msgWid').show();
-		$("#msg").empty();
-		$("#msg").append(message);
-	}/*else if(type=="warn"){
-		$("#messageDiv").empty();
-		$("#messageDiv").append("<div class='ui-widget'><div class='ui-state-highlight ui-corner-all' style='font-size: 14px; padding: 0.5em;'>"+
-				"<p><span class='ui-icon ui-icon-notice' style='float: left; margin-right: .3em;'></span>"+message+
-				"</p></div></div>").fadeIn(600, function(){
-				$(this).delay(5000).fadeOut("slow");;
-		});
-	}*/else{
-		$('#msgWid').show();
-		$("#msg").empty();
-		$("#msg").append("Fatal error occured!!");
+		$().toastmessage('showErrorToast', message);
+	}else if(type=="warn"){
+		$().toastmessage('showWarningToast', message);
+	}else if(type=="notice"){
+		$().toastmessage('showNoticeToast', message);
+	}else{
+		$().toastmessage('showWarningToast', "Invalid Message Type.");
 	}
 }
 

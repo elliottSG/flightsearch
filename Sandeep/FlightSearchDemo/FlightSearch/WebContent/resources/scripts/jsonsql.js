@@ -1,4 +1,4 @@
-/*
+/**
  * JsonSQL
  * Modifications done in original version by Trent Richardson
  * Version 0.1

@@ -2,9 +2,50 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Test Page</title>
+<script type="text/javascript">
+	function popup(url,width,height) {
+		var left = window.screen.width - (width + 100);
+		var top = (window.screen.height / 2) - ((height / 2) + 50);
+		var params = 'width=' + width + ', height=' + height;
+		params += ', top=' + top + ', left=' + left;
+		params += ', directories=no';
+		params += ', location=no';
+		params += ', menubar=no';
+		params += ', resizable=no';
+		params += ', scrollbars=no';
+		params += ', status=no';
+		params += ', toolbar=no';
+		newwin = window.open(url, 'Flight Search', params);
+		if (window.focus) {
+			newwin.focus();
+		}
+		return false;
+	}
+</script>
+<style type="text/css">
+body {
+	text-align: center;
+	font-family: Arial, Helvetica;
+}
+</style>
 </head>
 <body>
-
+	<center>
+		<h2>Test web page to launch mock windows</h2>
+		<br/>
+		<h3>This window tries to mock various screen resolutions. Click on the corresponding links.</h3>
+		<br>
+		<table cellspacing="20" align="center">
+			<tr>
+				<td><a href="#" onclick="popup('search.html',1024,768)">iPad Mini - Landscape</a></td>
+				<td><a href="#" onclick="popup('search.html',1280,720)">Samsung Galaxy - Landscape</a></td>
+			</tr>
+			<tr>
+				<td><a href="#" onclick="popup('search.html',1024,768)">Older Desktops/Laptops</a></td>
+				<td><a href="#" onclick="popup('search.html',1280,720)">Modern Desktops/Laptops</a></td>
+			</tr>
+		</table>
+	</center>
 </body>
 </html>
