@@ -5,6 +5,9 @@
  * Please refer to inline comments for exact description.
  */
 
+//declaring global variables
+var source, destination,depDate,retDate;
+
 $(document).ready(function() {
 	$("#tab-container").organicTabs();  //Creating Oneway and Return tabs
 	
@@ -36,6 +39,7 @@ $(document).ready(function() {
 	$('li').click(function(){
 		if($(this).text()==="One Way"){
 			$("#retDate").val("");
+			retDate='';
 		}
 	});
 	
@@ -52,11 +56,13 @@ $(document).ready(function() {
 	      stop:function(_,ui){      // Query json data for filtering by price
 		  		var minVal = ui.values[0];
 				var maxVal = ui.values[1];
+				var table = $("table.oneTable");
 		    	var filteredResult = jsonsql.query("select * from flightData.result where (cost >="+minVal+" && cost <="+maxVal+") order by cost",flightData);
 		    	if($("#retDate").val()===""){  //checking if slider was changed for Oneway tab
 		    		if(filteredResult.length>0){
-		    			var table = $("table.oneTable");
 		    			table.empty();
+		    			$('div.resultRoute').html(source+' > '+destination);
+						$('div.resultPlan').html('Depart :'+depDate);
 		    			var tr = "<tr class='row'>";
 		    			for(i in filteredResult){  //Displaying the filtered data
 		    				tr+="<td class='flight'><div class='showPrice'>Rs. "+filteredResult[i].cost+"</div>"+
@@ -71,12 +77,16 @@ $(document).ready(function() {
 		    			$('#result').show();
 		    		}else{ //handling error
 		    			Message.set('error','No Flight Data found!');
+		    			table.empty();
+		    			$('div.resultRoute').html('No Flights found for this criteria.');
+						$('div.resultPlan').html('');
 		    		}
 		    	}
 		    	else{
 		    		if(filteredResult.length>0){  // performing similar operation as above for return tab
-		    			var table = $("table.oneTable");
 		    			table.empty();
+		    			$('div.resultRoute').html(source+' > '+destination+' > '+source);
+						$('div.resultPlan').html('Depart :'+depDate+'<br/>Return :'+retDate);
 		    			var tr = "<tr class='row'>";
 		    			for(i in filteredResult){
 		    				tr+= "<td class='flight'><div class='showPrice'>Rs. "+filteredResult[i].cost+"</div>"+
@@ -95,6 +105,9 @@ $(document).ready(function() {
 		    			$('#result').show();
 		    		}else{// handling error
 		    			Message.set('error','No Flight Data found!');
+		    			table.empty();
+		    			$('div.resultRoute').html('No Flights found for this criteria.');
+						$('div.resultPlan').html('');
 		    		};
 		    	};
 		 }
@@ -106,14 +119,15 @@ $(document).ready(function() {
 	//this function is called for one way flight search
 	$("#oneWaySubmit").click(function(){
 		//getting form values
-		var source = $("#sourceO").val();
-		var destination = $("#destinationO").val();   
-		var depDate = $('#depDate').val();
+		source = $("#sourceO").val();
+		destination = $("#destinationO").val();   
+		depDate = $('#depDate').val();
 		var noOfPass = $("#noOfPassO").val();
 		// setting the same in return tab to help user
 		document.getElementById('sourceR').value=source;
 		document.getElementById('destinationR').value=destination;
 		document.getElementById('depDateR').value=depDate;
+		var table = $("table.oneTable");
 		if(source.length===0){ //validating mandatory source field
 			Message.set('error','Please enter the city of origin!');
 		}else if(destination.length===0){ // validating mandatory destination field
@@ -133,7 +147,7 @@ $(document).ready(function() {
 			if(filteredResult.length>0){  //displaying the filtered data in the table
 				$('div.resultRoute').html(source+' > '+destination);
 				$('div.resultPlan').html('Depart :'+depDate);
-				var table = $("table.oneTable");
+				
 				table.empty();
 				var tr = "<tr class='row'>";
 				for(i in filteredResult){
@@ -149,6 +163,9 @@ $(document).ready(function() {
 				$('#result').show();
 			}else{//handling error
 				Message.set('error','No Flight Data found!');
+				table.empty();
+    			$('div.resultRoute').html('No Flights found for this criteria.');
+				$('div.resultPlan').html('');
 			};
 		}
 	});
@@ -157,15 +174,16 @@ $(document).ready(function() {
 	// this function is called for return search functionality
 	$("#returnSubmit").click(function(){
 		// reading form values
-		var source = $("#sourceR").val();
-		var destination = $("#destinationR").val();
+		source = $("#sourceR").val();
+		destination = $("#destinationR").val();
 		var noOfPass = $("#noOfPassR").val();
-		var depDate = $('#depDateR').val();
-		var retDate = $('#retDate').val();
+		depDate = $('#depDateR').val();
+		retDate = $('#retDate').val();
 		// setting the same values in one way tab to help user
 		document.getElementById('sourceO').value=source;
 		document.getElementById('destinationO').value=destination;
 		document.getElementById('depDate').value=depDate;
+		var table = $("table.oneTable");
 		if(source.length===0){ // performing mandatory source check
 			Message.set('error','Please enter the city of origin!');
 		}else if(destination.length===0){ // performing mandatory destination check
@@ -187,7 +205,7 @@ $(document).ready(function() {
 			if(filteredResult.length>0){ //displaying the filtered data in the table
 				$('div.resultRoute').html(source+' > '+destination+' > '+source);
 				$('div.resultPlan').html('Depart :'+depDate+'<br/>Return :'+retDate);
-				var table = $("table.oneTable");
+				
 				table.empty();
 				var tr = "<tr class='row'>";
 				for(i in filteredResult){
@@ -207,6 +225,9 @@ $(document).ready(function() {
 				$('#result').show();
 			}else{// handling error
 				Message.set('error','No Flight Data found!');
+				table.empty();
+    			$('div.resultRoute').html('No Flights found for this criteria.');
+				$('div.resultPlan').html('');
 			};
 		}
 	});
